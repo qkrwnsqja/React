@@ -11,13 +11,14 @@ import  './chp04/ConfirmDialog.css'
 import Clock from "./chp04/Clock";
 import './chp04/clock.css'
 import Comment from "./chp05/exam01/Comment";
+import BookList from "./chp05/exam02/BookList";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <Comment />
+        <BookList />
     </React.StrictMode>
 );
 
