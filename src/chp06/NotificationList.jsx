@@ -1,5 +1,4 @@
 import React from "react";
-import notification from "./Notification";
 import Notification from "./Notification";
 
 const reservedNotifications = [

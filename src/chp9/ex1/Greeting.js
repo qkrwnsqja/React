@@ -11,12 +11,11 @@ function GuestGreeting(props) {
 function Greeting(props) {
     const isLoggedIn = props.isLoggedIn;
     // const isLoggedIn = true
-    if(isLoggedIn) {
+    if(isLoggedIn){
         return <UserGreeting/>
-    } else {
+    }else{
         return <GuestGreeting/>
     }
-    return "<h1>다시 오셨군요~</h1>"
 }
 
 export default Greeting;

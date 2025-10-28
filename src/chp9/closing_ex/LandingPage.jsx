@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import Toolbar from "./Toolbar";
+import './toolbar.css';
 
-
-function LandingPage() {
+function LandingPage(){
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const onClickLogin = () => {

@@ -1,5 +1,4 @@
 import React from "react";
-import button from "../../chp04/Button";
 
 function LogoutButton(props) {
     return(

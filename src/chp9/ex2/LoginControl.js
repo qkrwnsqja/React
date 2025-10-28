@@ -6,19 +6,19 @@ import Greeting from "../ex1/Greeting";
 function LoginControl() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    const handleLogInClick = ()=> {
+    const handleLogInClick = ()=>{
         setIsLoggedIn(true)
     }
 
-    const handleLogOutClick = ()=> {
+    const handleLogOutClick = ()=>{
         setIsLoggedIn(false)
     }
 
     let btn;
 
-    if (isLoggedIn) {
+    if(isLoggedIn){
         btn = <LogoutButton onClick={handleLogOutClick}/>
-    } else {
+    }else{
         btn = <LoginButton onClick={handleLogInClick}/>
     }
 
