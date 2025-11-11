@@ -1,0 +1,126 @@
+/* ===== Base Reset ===== */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    color: #1f2937;            /* slate-800 */
+    background: #f5f7fa;
+    display: flex; align-items: center; justify-content: center;
+}
+
+/* ===== Card Form ===== */
+form {
+    width: 460px; max-width: 92%;
+    background: #fff;
+    padding: 28px 24px;
+    border: 1px solid #e5e7eb;          /* gray-200 */
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0,0,0,.08);
+    display: flex; flex-direction: column; gap: 16px;
+}
+
+/* 제목 간격만 살짝 */
+h2 { margin-bottom: 8px; font-weight: 800; }
+
+/* ===== Labels ===== */
+label {
+    display: flex; flex-direction: column; gap: 8px;
+    font-size: 15px; font-weight: 600; color: #111827; /* gray-900 */
+    line-height: 1.35;
+}
+
+/* ===== Inputs ===== */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #cfd8e3;          /* blue-gray-200 */
+    border-radius: 10px;
+    background: #fff;
+    font-size: 15px;
+    transition: border .15s ease, box-shadow .15s ease, background .15s ease;
+}
+
+textarea {
+    min-height: 96px;
+    resize: vertical;                    /* 사용자 크기조절 */
+}
+
+input:hover,
+select:hover,
+textarea:hover { border-color: #b6c2d1; }
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;               /* blue-600 */
+    box-shadow: 0 0 0 3px rgba(37,99,235,.2);
+    background: #fff;
+}
+
+/* number 스피너 제거 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+input[type="number"] { -moz-appearance: textfield; }
+
+/* select 기본 화살표 브라우저 기본 유지(최대 호환) */
+
+/* ===== Submit Button ===== */
+button[type="submit"],
+button:not([type]) { /* 비워둔 버튼 대비 */
+    align-self: center;
+    width: 70%;
+    height: 46px;
+    border: 0; border-radius: 999px;
+    background: #2563eb;                /* blue-600 */
+    color: #fff;
+    font-weight: 700; font-size: 15px; letter-spacing: .2px;
+    cursor: pointer;
+    transition: filter .15s ease, transform .08s ease, box-shadow .15s ease;
+    box-shadow: 0 6px 16px rgba(37,99,235,.28);
+}
+button[type="submit"]:hover,
+button:not([type]):hover { filter: brightness(1.06); }
+button[type="submit"]:active,
+button:not([type]):active { transform: scale(.985); }
+button[disabled]{
+    opacity: .6; cursor: not-allowed; box-shadow: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 520px) {
+    form { width: 94%; padding: 22px 18px; }
+    button[type="submit"], button:not([type]) { width: 100%; }
+}
+
+/* ===== Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+}
+
+/* ===== Dark Mode (opt-in by system) ===== */
+@media (prefers-color-scheme: dark) {
+    body { background: #0b1220; color: #e5e7eb; }
+    form {
+        background: #111827; border-color: #1f2937;
+        box-shadow: 0 12px 32px rgba(0,0,0,.5);
+    }
+    label { color: #e5e7eb; }
+    input, select, textarea {
+        background: #0f172a; border-color: #334155; color: #e5e7eb;
+    }
+    input:focus, select:focus, textarea:focus {
+        border-color: #60a5fa; box-shadow: 0 0 0 3px rgba(96,165,250,.25);
+    }
+    button[type="submit"], button:not([type]) {
+        background: #3b82f6; box-shadow: 0 6px 16px rgba(59,130,246,.35);
+    }
+}

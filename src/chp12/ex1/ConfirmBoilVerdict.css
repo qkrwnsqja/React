@@ -1,0 +1,90 @@
+/* 전체 화면 설정 */
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #1f2937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* fieldset: 카드 느낌 */
+fieldset {
+    background: #ffffff;
+    padding: 2.5rem 2.8rem;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    width: 400px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.4rem;
+    transition: transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+fieldset:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* legend (제목) */
+legend {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111827;
+    text-align: center;
+}
+
+/* 입력창 */
+input[type="text"],
+input[type="number"],
+input:not([type]) {
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #cfd8e3;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+/* 결과 문구 기본값 */
+.boil-true,
+.boil-false {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    transition: color 0.2s ease;
+}
+
+/* 물이 끓는 경우 */
+.boil-true {
+    color: #ef4444; /* 빨강 (red-500) */
+    text-shadow: 0 0 6px rgba(239, 68, 68, 0.25);
+}
+
+/* 아직 안 끓는 경우 */
+.boil-false {
+    color: #2563eb; /* 파랑 (blue-600) */
+    text-shadow: 0 0 6px rgba(37, 99, 235, 0.25);
+}
+
+/* 반응형 */
+@media (max-width: 480px) {
+    fieldset {
+        width: 92%;
+        padding: 2rem;
+    }
+    legend {
+        font-size: 1.05rem;
+    }
+}
