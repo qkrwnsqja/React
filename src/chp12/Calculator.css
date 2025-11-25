@@ -1,0 +1,96 @@
+body {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.calculator-container {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    padding: 2.5rem;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.temperature-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.temperature-legend {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.temperature-input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.03);
+    box-sizing: border-box;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.temperature-input:focus {
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.verdict-wrapper {
+    text-align: center;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    color: #444;
+}
+
+.verdict-card {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.verdict-not-boil {
+    background-color: rgba(0, 122, 255, 0.1);
+    color: #007aff;
+    border: 1px solid rgba(0, 122, 255, 0.2);
+}
+
+.verdict-boil {
+    background-color: rgba(255, 59, 48, 0.1);
+    color: #ff3b30;
+    border: 1px solid rgba(255, 59, 48, 0.2);
+    transform: scale(1.05);
+}

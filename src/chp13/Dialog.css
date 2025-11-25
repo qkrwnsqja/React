@@ -1,0 +1,67 @@
+body {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.fancy-border {
+    padding: 20px 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.fancy-border:hover {
+    transform: translateY(-5px);
+}
+
+.fancy-border-blue {
+    background: rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(0, 122, 255, 0.3);
+    border-left: 10px solid #007aff;
+}
+.fancy-border-blue .dialog-title { color: #007aff; }
+
+.fancy-border-yellow {
+    background: rgba(255, 255, 240, 0.6);
+    border: 2px solid rgba(255, 204, 0, 0.3);
+    border-left: 10px solid #ffcc00;
+}
+.fancy-border-yellow .dialog-title { color: #d4a700; }
+
+.fancy-border-red {
+    background: rgba(255, 240, 240, 0.6);
+    border: 2px solid rgba(255, 59, 48, 0.3);
+    border-left: 10px solid #ff3b30;
+}
+.fancy-border-red .dialog-title { color: #ff3b30; }
+
+.dialog-title {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.dialog-message {
+    margin: 0;
+    color: #555;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}

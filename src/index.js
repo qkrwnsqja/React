@@ -1,19 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import DistanceConverter from "./chp12/ex2_1/DistanceConverter";
-
-
-
+import DialogApp from "./chp13/DialogApp";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <DistanceConverter/>
+        <DialogApp/>
     </React.StrictMode>
 );
 
